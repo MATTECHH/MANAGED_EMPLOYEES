@@ -9,8 +9,7 @@ O projeto permite cadastrar, visualizar, editar e remover colaboradores de forma
 ## 🚀 Demonstração do Projeto
 
 🔗 Repositório oficial:  
-https://github.com/MATTECHH/MANAGED_EMPLOYEES
-
+https://mattechh.github.io/MANAGED_EMPLOYEES/
 ---
 
 ## 📌 Sobre o projeto
