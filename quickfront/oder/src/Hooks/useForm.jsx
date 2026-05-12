@@ -34,6 +34,7 @@ export const useForm = (url) => {
 
     const onName = (e) => {
         setName(e.target.value)
+        setError("")
 
         clearTimeout(timeoutof.current)
 
@@ -45,6 +46,7 @@ export const useForm = (url) => {
     }
     const onEmail = (e) => {
         setEmail(e.target.value)
+        setError("")
 
         clearTimeout(timeoutof.current)
 
@@ -56,6 +58,7 @@ export const useForm = (url) => {
     }
     const onCpf = (e) => {
         setCpf(e.target.value)
+        setError("")
 
         clearTimeout(timeoutof.current)
 
@@ -67,6 +70,7 @@ export const useForm = (url) => {
     }
     const onChave = (e) => {
         setChave(e.target.value)
+        setError("")
 
         clearTimeout(timeoutof.current)
 
@@ -78,7 +82,8 @@ export const useForm = (url) => {
     }
     const onNumero = (e) => {
         setNumero(e.target.value)
-
+        setError("")
+        
         clearTimeout(timeoutof.current)
 
         dispatch({type: "Escrevendo"})

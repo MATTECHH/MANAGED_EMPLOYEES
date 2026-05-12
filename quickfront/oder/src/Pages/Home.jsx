@@ -8,9 +8,9 @@ const Home = () => {
     const get_error_user = () => {
         return (
             <>
-                <div className="fixed right-0 bg-neutral-600 rounded-2xl flex flex-col items-center">
+                <div className="fixed right-120 bg-neutral-600 rounded-2xl flex flex-col items-center p-6 top-1/2 gap-2 hover:bg-neutral-700 transition-all duration-200">
                     <h1 className="text-4xl hover:scale-110 transition-all duration-200">🪫</h1>
-                    <p className="text-center text-red-600 uppercase">{error}</p>
+                    <p className="text-center text-sm text-red-600 uppercase">{error}</p>
                 </div>
             </>
         )
