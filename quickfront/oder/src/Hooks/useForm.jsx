@@ -91,7 +91,7 @@ export const useForm = (url) => {
     const handleSubmit = async(e) => {
         e.preventDefault()
 
-        dispatch(({type: "Enviando"}))
+        dispatch({type: "Enviando"})
 
         const add = {
             name,
@@ -112,6 +112,8 @@ export const useForm = (url) => {
 
             if(!res.ok){
                 console.log("Erro ao buscar dados");
+                throw new Error(error.message);
+                
             }
 
             await res.json();

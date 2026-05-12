@@ -114,7 +114,7 @@ app.put("/users/:id", async(req, res) => {
         })
 
         if(!updateUser){
-            res.status(404).json({"message": "Erro ao buscar, user nao encontrado"})
+            return res.status(404).json({"message": "Erro ao buscar, user nao encontrado"})
         }
     
         if (!regexEmail.test(email)) {
