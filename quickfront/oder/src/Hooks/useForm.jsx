@@ -111,9 +111,8 @@ export const useForm = (url) => {
             });
 
             if(!res.ok){
-                console.log("Erro ao buscar dados");
-                throw new Error(error.message);
-                
+                const errorData = await res.json();
+                throw new Error(errorData.message);
             }
 
             await res.json();
