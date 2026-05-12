@@ -5,9 +5,13 @@ export const useData = (url) => {
 
     useEffect(() => {
         const fetchData = async() => {
-            const res = await fetch(url);
-            const json = await res.json();
-            setData(json.users)
+            try {
+                const res = await fetch(url);
+                const json = await res.json();
+                setData(json.users)
+            } catch (e) {
+                console.log(e);
+            }
         };
 
         fetchData()

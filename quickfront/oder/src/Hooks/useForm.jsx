@@ -25,6 +25,7 @@ export const useForm = (url) => {
     
     const timeoutof = useRef(null)
 
+    const [error, setError] = useState("")
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [cpf, setCpf] = useState("")
@@ -126,6 +127,7 @@ export const useForm = (url) => {
             setNumero("")
         } catch (e) {
             console.log("Erro ao criar novo usuario", e);
+            setError(e.message)
         }
     };
 
@@ -136,6 +138,7 @@ export const useForm = (url) => {
         cpf,
         chave,
         numero,
+        error,
         onName,
         onEmail,
         onCpf,

@@ -3,7 +3,18 @@ import {useForm} from '../Hooks/useForm.jsx'
 import {url} from '../Utils/url.js'
 
 const Home = () => {
-    const {status, name, email, cpf, chave, numero, onChave, onNumero, onCpf, onName, onEmail, handleSubmit} = useForm(url);
+    const {status, name, email, cpf, chave, numero,error, onChave, onNumero, onCpf, onName, onEmail, handleSubmit} = useForm(url);
+
+    const get_error_user = () => {
+        return (
+            <>
+                <div className="fixed right-0 bg-neutral-600 rounded-2xl flex flex-col items-center">
+                    <h1 className="text-4xl hover:scale-110 transition-all duration-200">🪫</h1>
+                    <p className="text-center text-red-600 uppercase">{error}</p>
+                </div>
+            </>
+        )
+    }
 
     return (
         <>
@@ -44,6 +55,8 @@ const Home = () => {
                         {status}
                     </p>
                 </form>
+
+                {error && get_error_user()}
             </section>
         </>
     )
